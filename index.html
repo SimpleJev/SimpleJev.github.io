@@ -1,4 +1,240 @@
-<!doctype html><meta charset="utf-8">
-<title>simplejev</title>
-<h1>simplejev</h1>
-<ul><li><a href="/JevAny/">JevAny</a></li></ul>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1114">
+  <meta name="description" content="SimpleJev builds open infrastructure and research for System 1 thinking models. Our first release, JevAny, trains and deploys your own Jev model from open LLMs and VLMs.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SimpleJev: Open infrastructure for System 1 thinking models">
+  <meta property="og:description" content="Open infrastructure and research for System 1 thinking models. Home of JevAny.">
+  <meta property="og:url" content="https://simplejev.github.io/">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://simplejev.github.io/">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <title>SimpleJev: Open infrastructure for System 1 thinking models</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ambient" aria-hidden="true">
+    <picture class="ambient-poster">
+      <source media="(max-aspect-ratio: 3/4)" srcset="assets/media/grid-mobile.webp">
+      <img src="assets/media/grid.webp" width="720" height="480" alt="">
+    </picture>
+    <div class="ambient-shade"></div>
+  </div>
+
+  <header class="site-header wrap">
+    <a class="brand" href="./" aria-label="SimpleJev home">
+      <img src="assets/logo.svg" width="34" height="34" alt="">
+      <span>SimpleJev<span class="brand-period">.</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#mission">Mission</a>
+      <a href="#jevany">JevAny</a>
+      <a href="#results">Results</a>
+      <a href="#research">Research</a>
+      <a href="#team">Team</a>
+    </nav>
+    <div class="header-links">
+      <a class="header-link" href="https://github.com/SimpleJev" aria-label="SimpleJev on GitHub" title="SimpleJev on GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.6.1.8-.2.8-.5v-2.1c-3.4.7-4.1-1.4-4.1-1.4-.5-1.3-1.3-1.6-1.3-1.6-1.1-.8.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.6-1.4-5.6-6.1 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.8 11.8 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.3 0 4.7-2.9 5.8-5.6 6.1.4.4.8 1.1.8 2.2V22c0 .3.2.6.8.5A11.1 11.1 0 0 0 12 .9Z"/></svg>
+        <span class="link-label">GitHub</span><span class="link-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="header-link" href="https://huggingface.co/SimpleJev" aria-label="SimpleJev on Hugging Face" title="SimpleJev on Hugging Face">
+        <span class="hf-mark" aria-hidden="true">🤗</span><span class="link-label">Hugging Face</span><span class="link-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="affiliation-ribbon wrap" aria-label="Contributing institutions">
+      <span class="ribbon-label">Researchers from</span>
+      <ul>
+        <li>UIUC</li>
+        <li>Meta AI</li>
+        <li>MBZUAI</li>
+        <li class="ribbon-more">and more</li>
+      </ul>
+    </div>
+
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <p class="eyebrow hero-eyebrow">Open infrastructure · System 1 thinking models</p>
+      <h1 id="hero-title">Think fast.<br><span class="hero-accent">Build open.</span></h1>
+      <p class="hero-description">SimpleJev builds open infrastructure for System 1 thinking models, and does research on top of it. Models that read the situation and choose in a single step, with probabilities you can act on.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="/JevAny/">Explore JevAny <span aria-hidden="true">→</span></a>
+        <a class="button secondary" href="https://github.com/SimpleJev/JevAny"><span class="star-icon" aria-hidden="true">☆</span> Star on GitHub</a>
+      </div>
+    </section>
+
+    <section class="stats wrap" aria-label="JevAny at a glance">
+      <dl class="stat-grid">
+        <div><dt>Decision examples</dt><dd>2.18M<span>+</span></dd></div>
+        <div><dt>Released models</dt><dd>5</dd></div>
+        <div><dt>Supported base LLMs / VLMs</dt><dd>26</dd></div>
+        <div><dt>Model families</dt><dd>7</dd></div>
+      </dl>
+    </section>
+
+    <section id="mission" class="mission-section wrap" aria-labelledby="mission-title">
+      <div class="mission-copy">
+        <h2 id="mission-title">Not every decision needs a long chain of thought</h2>
+        <p class="section-description">Large models reason step by step, which is slow and costly. Many decisions in agents, robots and software are fast and intuitive instead: route this ticket, pick this tool, take this action. A System 1 model sees the state and the options, then answers in one forward pass.</p>
+        <ol class="steps">
+          <li><span class="step-mark mono">S1</span><div><h3>Fast, calibrated choices</h3><p>Return a choice with probabilities, so your application can act or escalate to human review.</p></div></li>
+          <li><span class="step-mark mono">S2</span><div><h3>Work alongside LLMs</h3><p>Let the LLM plan and recover; let Jev pick among the actions it proposes.</p></div></li>
+        </ol>
+        <a class="text-link" href="https://github.com/SimpleJev/JevAny#results-and-demos">Jev inside LLM agent loops <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="api-visual">
+        <div class="api-top"><span>One decision, one pass</span><span>Illustrative</span></div>
+        <div class="decision-input">
+          <p class="mono input-label">STATE</p>
+          <p>"I was charged twice for the same order."</p>
+          <p class="mono input-label">QUESTION</p>
+          <p>Which team should handle this ticket?</p>
+        </div>
+        <div class="decision-output">
+          <div class="output-title"><span>Choice &amp; probabilities</span><span class="example-label">Single forward pass</span></div>
+          <div class="probability"><span>billing</span><span class="probability-track"><i style="width:96%"></i></span><span class="mono">0.96</span><span class="selected-mark" role="img" aria-label="Selected">✓</span></div>
+          <div class="probability other"><span>shipping</span><span class="probability-track"><i style="width:3%"></i></span><span class="mono">0.03</span><span></span></div>
+          <div class="probability other"><span>account</span><span class="probability-track"><i style="width:1%"></i></span><span class="mono">0.01</span><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="jevany" class="project-section wrap" aria-labelledby="jevany-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow project-eyebrow">Our first release</p>
+          <h2 id="jevany-title">JevAny</h2>
+        </div>
+        <a class="text-link" href="/JevAny/">Project page <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="project-card">
+        <div class="project-intro">
+          <img src="assets/favicon.svg" width="56" height="56" alt="">
+          <p class="project-lede">Infrastructure for training and deploying <strong>your own Jev model</strong> from open-source LLMs and VLMs.</p>
+          <p class="project-body">Built with researchers from UIUC, Meta AI, MBZUAI and other institutions. We used JevAny to train and release five models on more than 2.18 million decisions. We hope it helps researchers and engineers train and deploy open Jev models faster, and speeds up research in this area.</p>
+          <div class="project-links">
+            <a class="button primary" href="/JevAny/">Visit JevAny <span aria-hidden="true">→</span></a>
+            <a class="button secondary" href="https://github.com/SimpleJev/JevAny">Code</a>
+            <a class="button secondary" href="https://huggingface.co/collections/SimpleJev/jevany-adaptive-decision-systems-6abc8fd39266b1c17b11b4e6"><span aria-hidden="true">🤗</span> Models</a>
+            <a class="button secondary" href="/JevAny/files/reports/JevAny_Tech_Report.pdf">Tech report</a>
+          </div>
+        </div>
+        <ol class="pipeline" aria-label="JevAny pipeline">
+          <li><span class="mono">01</span><h3>Data</h3><p>Turn raw logs into labelled decisions: state, question, options.</p></li>
+          <li><span class="mono">02</span><h3>Train</h3><p>Adapt any of 26 supported LLM and VLM backbones with LoRA.</p></li>
+          <li><span class="mono">03</span><h3>Evaluate</h3><p>Measure accuracy and calibration (NLL, Brier, ECE) on JevBench and Transfer.</p></li>
+          <li><span class="mono">04</span><h3>Deploy</h3><p>Serve a checkpoint behind one API, from Python or HTTP.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="results" class="benchmark-section wrap" aria-labelledby="results-title">
+      <div class="section-heading">
+        <div><h2 id="results-title">Results</h2></div>
+        <a class="text-link" href="/JevAny/#benchmarks">All benchmarks <span aria-hidden="true">→</span></a>
+      </div>
+      <p class="benchmark-intro">JevAny-Qwen3.8-27B beats Jev 1.13.0 on both controlled evaluations. At matched scale, our 4B and 27B releases also beat Kev, the most popular open Jev variant.</p>
+      <div class="result-grid">
+        <div class="benchmark-panel">
+          <div class="chart-heading"><h3>vs Jev 1.13.0</h3><p>Accuracy · higher is better</p></div>
+          <div class="result-group">
+            <p class="group-label">JevBench</p>
+            <ol class="benchmark-chart">
+              <li class="benchmark-row ours"><span class="benchmark-model">JevAny-Qwen3.8-27B</span><span class="benchmark-track" aria-hidden="true"><i style="width:90.04%"></i></span><span class="benchmark-value">90.04%</span></li>
+              <li class="benchmark-row baseline"><span class="benchmark-model">Jev 1.13.0</span><span class="benchmark-track" aria-hidden="true"><i style="width:86.58%"></i></span><span class="benchmark-value">86.58%</span></li>
+            </ol>
+          </div>
+          <div class="result-group">
+            <p class="group-label">Transfer</p>
+            <ol class="benchmark-chart">
+              <li class="benchmark-row ours"><span class="benchmark-model">JevAny-Qwen3.8-27B</span><span class="benchmark-track" aria-hidden="true"><i style="width:86.04%"></i></span><span class="benchmark-value">86.04%</span></li>
+              <li class="benchmark-row baseline"><span class="benchmark-model">Jev 1.13.0</span><span class="benchmark-track" aria-hidden="true"><i style="width:85.37%"></i></span><span class="benchmark-value">85.37%</span></li>
+            </ol>
+          </div>
+        </div>
+        <div class="benchmark-panel">
+          <div class="chart-heading"><h3>vs Kev at matched scale</h3><p>JevBench accuracy · higher is better</p></div>
+          <div class="result-group">
+            <p class="group-label">27B</p>
+            <ol class="benchmark-chart">
+              <li class="benchmark-row ours"><span class="benchmark-model">JevAny-Qwen3.8-27B</span><span class="benchmark-track" aria-hidden="true"><i style="width:90.04%"></i></span><span class="benchmark-value">90.04%</span></li>
+              <li class="benchmark-row baseline"><span class="benchmark-model">Kev-27B</span><span class="benchmark-track" aria-hidden="true"><i style="width:85.28%"></i></span><span class="benchmark-value">85.28%</span></li>
+            </ol>
+          </div>
+          <div class="result-group">
+            <p class="group-label">4B</p>
+            <ol class="benchmark-chart">
+              <li class="benchmark-row ours"><span class="benchmark-model">JevAny-4B Direct-Token</span><span class="benchmark-track" aria-hidden="true"><i style="width:80.95%"></i></span><span class="benchmark-value">80.95%</span></li>
+              <li class="benchmark-row baseline"><span class="benchmark-model">Kev-4B</span><span class="benchmark-track" aria-hidden="true"><i style="width:75.32%"></i></span><span class="benchmark-value">75.32%</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <p class="benchmark-note">JevBench covers 231 public development items; Transfer covers 1,046 clean, knowable decisions. The 4B row is JevAny-Qwen3.5-4B-Direct-Token. These are diagnostic comparisons; see the <a href="/JevAny/docs/EVALUATION.html#model-family-v2">evaluation protocol</a> for details.</p>
+
+      <div class="support-heading models-heading">
+        <h3>Released models</h3>
+        <a class="text-link" href="https://huggingface.co/collections/SimpleJev/jevany-adaptive-decision-systems-6abc8fd39266b1c17b11b4e6">Hugging Face collection <span aria-hidden="true">↗</span></a>
+      </div>
+      <ul class="model-list">
+        <li><a href="https://huggingface.co/SimpleJev/JevAny-Qwen3.8-27B-LoRA"><span>JevAny-Qwen3.8-27B</span><small>Default release</small></a></li>
+        <li><a href="https://huggingface.co/SimpleJev/JevAny-Muse-Glimmer-30B-LoRA"><span>JevAny-Muse-Glimmer-30B</span><small>Muse alternative</small></a></li>
+        <li><a href="https://huggingface.co/SimpleJev/JevAny-Qwen3.5-4B-Direct-Token-LoRA"><span>JevAny-Qwen3.5-4B-Direct-Token</span><small>Best 4B on JevBench</small></a></li>
+        <li><a href="https://huggingface.co/SimpleJev/JevAny-Qwen3.5-4B-LoRA"><span>JevAny-Qwen3.5-4B</span><small>Compact, flexible choices</small></a></li>
+        <li><a href="https://huggingface.co/SimpleJev/JevAny-Gemma-4B-LoRA"><span>JevAny-Gemma-4B</span><small>Compact Gemma</small></a></li>
+      </ul>
+    </section>
+
+    <section id="research" class="research-section wrap" aria-labelledby="research-title">
+      <div class="section-heading">
+        <div><h2 id="research-title">What we work on</h2></div>
+      </div>
+      <div class="doc-cards">
+        <a href="/JevAny/"><h3>Infrastructure <span aria-hidden="true">→</span></h3><p>Open tooling for the full loop: data preparation, training, evaluation and deployment of System 1 models.</p></a>
+        <a href="/JevAny/docs/EVALUATION.html"><h3>Data &amp; evaluation <span aria-hidden="true">→</span></h3><p>Large-scale decision data and benchmarks that measure both accuracy and calibration.</p></a>
+        <a href="https://github.com/SimpleJev/JevAny#results-and-demos"><h3>System 1 + System 2 agents <span aria-hidden="true">→</span></h3><p>When fast choices should replace LLM steps in agent loops, and when to hand control back.</p></a>
+        <a href="/JevAny/#in-action"><h3>Multimodal &amp; embodied decisions <span aria-hidden="true">→</span></h3><p>Decisions from text, images and video, across robotics, mobility, browsing and software.</p></a>
+      </div>
+    </section>
+
+    <section id="team" class="team-section wrap" aria-labelledby="team-title">
+      <div class="team-copy">
+        <h2 id="team-title">An open, cross-institution team</h2>
+        <p class="section-description">SimpleJev brings together researchers and engineers from universities and industry labs. Everything we release is open: code, models and evaluation.</p>
+      </div>
+      <div class="team-side">
+        <ul class="institution-list">
+          <li>University of Illinois Urbana-Champaign</li>
+          <li>Meta AI</li>
+          <li>Mohamed bin Zayed University of Artificial Intelligence</li>
+          <li class="institution-more">and more</li>
+        </ul>
+        <div class="team-links">
+          <a class="text-link" href="https://github.com/SimpleJev/JevAny/issues">Open an issue <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="/JevAny/docs/contributing.html">Contribute <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <div class="footer-top">
+      <a class="brand" href="./"><img src="assets/logo.svg" width="28" height="28" alt=""><span>SimpleJev<span class="brand-period">.</span></span></a>
+      <nav aria-label="Footer navigation">
+        <a href="/JevAny/">JevAny</a>
+        <a href="https://github.com/SimpleJev">GitHub</a>
+        <a href="https://huggingface.co/SimpleJev">Hugging Face</a>
+        <a href="/JevAny/files/reports/JevAny_Tech_Report.pdf">Technical report</a>
+      </nav>
+    </div>
+    <div class="footer-bottom"><span>© 2026 SimpleJev</span><a href="/JevAny/docs/zh.html" lang="zh-CN">JevAny 中文文档 <span aria-hidden="true">→</span></a></div>
+  </footer>
+</body>
+</html>
